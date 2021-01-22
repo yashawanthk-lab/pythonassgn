@@ -1,0 +1,14 @@
+def age():
+    birth_date = input("Enter your date of birth in 'DD/MM/YYYY' format: ")
+    bday, bmonth, byear = int(birth_date[:2]), int(birth_date[3:5]), int(birth_date[6:])
+    today = input("Enter today's date in 'DD/MM/YYYY' format: ")
+    tday, tmonth, tyear = int(today[:2]), int(today[3:5]), int(today[6:])
+    
+    age = tyear - byear -1
+    if tmonth > bmonth:
+        age += 1
+    if tmonth == bmonth:
+        if tday >= bday:
+            age += 1
+    
+    print(f"You are {age} years old!")
