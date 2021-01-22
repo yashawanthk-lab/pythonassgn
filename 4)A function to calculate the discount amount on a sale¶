@@ -1,0 +1,11 @@
+def discount():
+    discount = 0
+    amount = int(input("Enter the purchase amount: "))
+    if amount > 5000:
+        discount = 0.4
+    elif amount > 2000:
+        discount = 0.2
+    bill = amount - amount*discount
+    print(f"Actual amount: {amount}")
+    print("Bill after discount: {0:.2f}".format(bill))
+    print("Total savings: {0:.2f}".format(amount*discount))
